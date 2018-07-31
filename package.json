@@ -1,8 +1,11 @@
 {
   "name": "firstpublishforhexlet",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "First project of Hexlet & First npm publish",
-  "main": "index.js",
+  "keywords": [
+    "Hexlet",
+    "Brain-games"
+  ],
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
@@ -19,17 +22,18 @@
     "type": "git",
     "url": "git+https://github.com/yoscro/project-lvl1-s316.git"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/yoscro/project-lvl1-s316/issues"
   },
   "homepage": "https://github.com/yoscro/project-lvl1-s316#readme",
   "dependencies": {
+    "readline-sync": "^1.4.9"
+  },
+  "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "readline-sync": "^1.4.9"
+    "babel-preset-stage-0": "^6.24.1"
   }
 }
