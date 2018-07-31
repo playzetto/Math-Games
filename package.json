@@ -7,7 +7,6 @@
     "Brain-games"
   ],
   "bin": {
-    "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
@@ -30,17 +29,17 @@
   },
   "homepage": "https://github.com/yoscro/project-lvl1-s316#readme",
   "dependencies": {
-    "babel-eslint": "^8.2.6",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-babel": "^5.1.0",
-    "eslint-plugin-import": "^2.13.0",
     "readline-sync": "^1.4.9"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-eslint": "^8.2.6",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.13.0"
   }
 }
