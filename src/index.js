@@ -1,12 +1,9 @@
 import readlineSync from 'readline-sync';
-
+// Определения на уровне модуля
 const numberOfQuestions = 3;
-const isEven = (num) => {
-  if (num % 2 === 0) {
-    return true;
-  }
-  return false;
-};
+const welcomeMessage = ('Welcome to Brain Games!');
+const evenRule = 'Answer "yes" if number even otherwise answer "no".';
+const isEven = num => num % 2 === 0;
 
 const playRound = () => {
   const question = Math.floor(Math.random() * 30);
@@ -21,8 +18,6 @@ const playRound = () => {
 };
 
 const startGame = () => {
-  const welcomeMessage = ('Welcome to Brain Games!');
-  const evenRule = 'Answer "yes" if number even otherwise answer "no".';
   console.log(welcomeMessage);
   console.log(evenRule);
   const userName = readlineSync.question('\nMay I have your name? ');
