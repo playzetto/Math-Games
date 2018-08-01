@@ -1,15 +1,17 @@
 import readlineSync from 'readline-sync';
 
-const askQuestion = () => {
+const numberOfQuestions = 3;
+const isEven = (num) => {
+  if (num % 2 === 0) {
+    return true;
+  }
+  return false;
+};
+
+const playRound = () => {
   const question = Math.floor(Math.random() * 30);
   console.log(`\nQuestion: ${question}`);
   const answer = readlineSync.question('Your answer: ');
-  const isEven = (num) => {
-    if (num % 2 === 0) {
-      return true;
-    }
-    return false;
-  };
   const rightAnswer = isEven(question) ? 'yes' : 'no';
   if (answer === rightAnswer) {
     return true;
@@ -26,9 +28,9 @@ const startGame = () => {
   const userName = readlineSync.question('\nMay I have your name? ');
   console.log(`Hello, ${userName}`);
   //  Asking question
-  const numberOfQuestions = 3;
   for (let i = 0; i < numberOfQuestions; i += 1) {
-    if (!askQuestion()) {
+    const isWinRound = playRound();
+    if (!isWinRound) {
       console.log(`\nLet's try again, ${userName}!`);
       return;
     }
