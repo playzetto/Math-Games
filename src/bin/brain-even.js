@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 import startGame from '..';
-import playRound from '../games/braineven';
+import { playRound, welcomeMessage } from '../games/even';
 
-startGame(playRound);
+startGame(playRound, welcomeMessage);
