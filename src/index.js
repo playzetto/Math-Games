@@ -1,43 +1,39 @@
 import readlineSync from 'readline-sync';
 
 const askQuestion = () => {
-  const randomNumber = Math.floor(Math.random() * 30);
-  console.log(`\nQuestion: ${randomNumber}`);
+  const question = Math.floor(Math.random() * 30);
+  console.log(`\nQuestion: ${question}`);
   const answer = readlineSync.question('Your answer: ');
-  let rightAnswer;
-  if (answer % 2 === 0) {
-    rightAnswer = 'yes';
-  } else {
-    rightAnswer = 'no';
-  }
-
-  if (randomNumber % 2 === 0 && answer === 'yes') {
-    console.log('\nCorrect!');
+  const isEven = (num) => {
+    if (num % 2 === 0) {
+      return true;
+    }
+    return false;
+  };
+  const rightAnswer = isEven(question) ? 'yes' : 'no';
+  if (answer === rightAnswer) {
     return true;
   }
-  if (!(randomNumber % 2 === 0) && answer === 'no') {
-    console.log('\nCorrect!');
-    return true;
-  }
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was ${rightAnswer}.`);
+  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
   return false;
 };
 
 const startGame = () => {
-  console.log('Welcome to Brain Games!\nAnswer "yes" if number even otherwise answer "no".');
+  const welcomeMessage = ('Welcome to Brain Games!');
+  const evenRule = 'Answer "yes" if number even otherwise answer "no".';
+  console.log(welcomeMessage);
+  console.log(evenRule);
   const userName = readlineSync.question('\nMay I have your name? ');
   console.log(`Hello, ${userName}`);
   //  Asking question
-  for (let i = 0; i < 3; i += 1) {
+  const numberOfQuestions = 3;
+  for (let i = 0; i < numberOfQuestions; i += 1) {
     if (!askQuestion()) {
       console.log(`\nLet's try again, ${userName}!`);
-      break;
-    }
-    if (i === 2) {
-      console.log(`\nCongratulations, ${userName}!`);
+      return;
     }
   }
+  console.log(`\nCongratulations, ${userName}!`);
 };
-
 
 export default startGame;
