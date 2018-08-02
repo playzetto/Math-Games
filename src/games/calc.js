@@ -1,10 +1,7 @@
 import readlineSync from 'readline-sync';
 import { cons, car, cdr } from 'hexlet-pairs';
 // Определения на уровне модуля
-const welcomeText = 'Welcome to Brain Games!\nWhat is the result of the expression?';
-const correctMessage = 'Correct!';
 const getRandomNumber = () => Math.floor(Math.random() * 30);
-const welcomeMessage = () => console.log(welcomeText);
 
 const playRound = () => {
   const questionPair = cons(getRandomNumber(), getRandomNumber());
@@ -23,11 +20,10 @@ const playRound = () => {
   }
   const answer = readlineSync.questionInt('Your answer: ');
   if (answer === rightAnswer) {
-    console.log(correctMessage);
     return true;
   }
   console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
   return false;
 };
 
-export { welcomeMessage, playRound };
+export default playRound;
