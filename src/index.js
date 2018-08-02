@@ -1,9 +1,10 @@
 import readlineSync from 'readline-sync';
 // Определения на уровне модуля
 const numberOfQuestions = 3;
+const welcomeMessage = rule => console.log(`Welcome to Brain Games!\n${rule}`);
 
-const initGame = (playRound, welcomeMessage) => {
-  welcomeMessage();
+const initGame = (playRound, rule) => {
+  welcomeMessage(rule);
   const userName = readlineSync.question('\nMay I have your name? ');
   console.log(`Hello, ${userName}`);
   //  Asking question

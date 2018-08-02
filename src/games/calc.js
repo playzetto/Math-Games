@@ -4,7 +4,7 @@ import initGame from '..';
 
 // Определения на уровне модуля
 const getRandomNumber = () => Math.floor(Math.random() * 30);
-const welcomeMessage = () => console.log('Welcome to Brain Games!\nWhat is the result of the expression?');
+const rule = 'What is the result of the expression?';
 
 const playRound = () => {
   const questionPair = cons(getRandomNumber(), getRandomNumber());
@@ -29,5 +29,5 @@ const playRound = () => {
   return false;
 };
 
-const launchGame = () => initGame(playRound, welcomeMessage);
+const launchGame = () => initGame(playRound, rule);
 export default launchGame;

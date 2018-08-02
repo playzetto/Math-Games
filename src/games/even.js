@@ -3,7 +3,7 @@ import gameInit from '..';
 // Определения на уровне модуля
 const isEven = num => num % 2 === 0;
 const getRandomNumber = () => Math.floor(Math.random() * 30);
-const welcomeMessage = () => console.log('Welcome to Brain Games!\nAnswer "yes" if number even otherwise answer "no".');
+const rule = 'Answer "yes" if number even otherwise answer "no".';
 
 const playRound = () => {
   const question = getRandomNumber();
@@ -16,5 +16,5 @@ const playRound = () => {
   console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
   return false;
 };
-const launchGame = () => gameInit(playRound, welcomeMessage);
+const launchGame = () => gameInit(playRound, rule);
 export default launchGame;
