@@ -1,11 +1,8 @@
 import readlineSync from 'readline-sync';
-import playRound from './games/calc';
 // Определения на уровне модуля
 const numberOfQuestions = 3;
-const welcomeText = 'Welcome to Brain Games!\nWhat is the result of the expression?';
-const welcomeMessage = () => console.log(welcomeText);
 
-const startGame = () => {
+const initGame = (playRound, welcomeMessage) => {
   welcomeMessage();
   const userName = readlineSync.question('\nMay I have your name? ');
   console.log(`Hello, ${userName}`);
@@ -21,4 +18,4 @@ const startGame = () => {
   console.log(`\nCongratulations, ${userName}!`);
 };
 
-export default startGame;
+export default initGame;
