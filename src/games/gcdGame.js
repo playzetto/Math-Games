@@ -1,5 +1,5 @@
 import playGame from '..';
-import { getRandomNumber } from '../utils';
+import getRandomNumber from '../utils';
 
 const rule = 'Find the greatest common divisor of given numbers.';
 const min = 1;

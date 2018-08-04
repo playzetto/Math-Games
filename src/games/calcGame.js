@@ -1,5 +1,5 @@
 import playGame from '..';
-import { getRandomNumber } from '../utils';
+import getRandomNumber from '../utils';
 
 const rule = 'What is the result of the expression?';
 const min = 1;
