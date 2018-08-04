@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
 
+export const isEven = num => num % 2 === 0;
+export const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 const welcomeMsg = () => console.log('Welcome to the Brain Games!');
 const gameRule = rule => console.log(`${rule}\n`);
 const userGreeting = () => {
@@ -7,7 +9,7 @@ const userGreeting = () => {
   return userName;
 };
 
-const playGame = (game, rule) => {
+export const playGame = (game, rule) => {
   welcomeMsg();
   gameRule(rule);
   const userName = userGreeting();
@@ -27,5 +29,3 @@ const playGame = (game, rule) => {
   };
   return iter(game, 0);
 };
-
-export default playGame;

@@ -1,5 +1,4 @@
-import { getRandomNumber, isEven } from '../math';
-import playGame from '..';
+import { getRandomNumber, isEven, playGame } from '..';
 
 const rule = 'Answer "yes" if number even otherwise answer "no".';
 
