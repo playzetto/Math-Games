@@ -1,4 +1,3 @@
-import readlinesync from 'readline-sync';
 import { getRandomNumber, isEven } from '../math';
 import playGame from '..';
 
@@ -9,9 +8,7 @@ const logic = () => {
   const max = 30;
   const riddleNum = getRandomNumber(min, max);
   const correctAnswer = isEven(riddleNum) ? 'yes' : 'no';
-  console.log(`Question : ${riddleNum}`);
-  const userAnswer = readlinesync.question('Your answer : ');
-  return [userAnswer, correctAnswer, riddleNum];
+  return [riddleNum, correctAnswer];
 };
 
 const startGame = () => playGame(logic, rule);
