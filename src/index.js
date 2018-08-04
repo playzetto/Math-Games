@@ -8,7 +8,7 @@ const playGame = (game, rule) => {
   const userName = readlineSync.question('May I ask your name ? ');
   const iter = (acc) => {
     if (acc === numberOfQuestions) {
-      console.log(`Congratulations, ${userName}!`);
+      return console.log(`Congratulations, ${userName}!`);
     }
     const [riddleNum, correctAnswer] = game();
     console.log(`Question: ${riddleNum}`);
