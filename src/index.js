@@ -17,7 +17,7 @@ const playGame = (game, rule) => {
       console.log('Correct!\n');
       return iter(acc + 1);
     }
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${userName}!`);
+    return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${userName}!`);
   };
   iter(0);
 };
