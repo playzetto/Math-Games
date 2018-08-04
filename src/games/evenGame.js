@@ -1,13 +1,14 @@
-import { getRandomNumber, isEven, playGame } from '..';
+import playGame from '..';
+import { getRandomNumber, isEven } from '../libs/math';
 
 const rule = 'Answer "yes" if number even otherwise answer "no".';
+const min = 1;
+const max = 30;
 
 const logic = () => {
-  const min = 1;
-  const max = 30;
-  const riddleNum = getRandomNumber(min, max);
-  const correctAnswer = isEven(riddleNum) ? 'yes' : 'no';
-  return [riddleNum, correctAnswer];
+  const num = getRandomNumber(min, max);
+  const correctAnswer = isEven(num) ? 'yes' : 'no';
+  return [num, correctAnswer];
 };
 
 const startGame = () => playGame(logic, rule);

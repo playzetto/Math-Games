@@ -1,21 +1,28 @@
-import { getRandomNumber, playGame } from '..';
+import playGame from '..';
+import { getRandomNumber } from '../libs/math';
 
 const rule = 'What is the result of the expression?';
+const min = 1;
+const max = 30;
 
 const logic = () => {
-  const min = 1;
-  const max = 30;
-  const add = (num1, num2) => [`${num1} + ${num2}`, String(num1 + num2)];
-  const sub = (num1, num2) => [`${num1} - ${num2}`, String(num1 - num2)];
-  const div = (num1, num2) => [`${num1} * ${num2}`, String(num1 * num2)];
   const num1 = getRandomNumber(min, max);
   const num2 = getRandomNumber(min, max);
-  const funcArray = [
-    add(num1, num2),
-    sub(num1, num2),
-    div(num1, num2),
-  ];
-  return funcArray[getRandomNumber(0, 3)];
+  const chooseOAction = getRandomNumber(0, 3);
+  let operand;
+  let correctAnswer;
+  if (chooseOAction === 0) {
+    correctAnswer = String(num1 * num2);
+    operand = '*';
+  } else if (chooseOAction === 1) {
+    correctAnswer = String(num1 + num2);
+    operand = '+';
+  } else if (chooseOAction === 2) {
+    correctAnswer = String(num1 - num2);
+    operand = '-';
+  }
+  const questionNum = `${num1} ${operand} ${num2}`;
+  return [questionNum, correctAnswer];
 };
 
 const startGame = () => playGame(logic, rule);
