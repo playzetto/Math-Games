@@ -13,7 +13,7 @@ const playGame = (game, rule) => {
   gameRule(rule);
   const userName = userGreeting();
   for (let i = 0; i < numberOfQuestions; i += 1) {
-    const [correctAnswer, userAnswer] = game();
+    const [userAnswer, correctAnswer] = game();
     if (userAnswer === correctAnswer) {
       console.log('Correct!\n');
     } else {
