@@ -1,7 +1,7 @@
 import playGame from '..';
 import { getRandomNumber, findGCD } from '../libs/math';
 
-const rule = 'What is the result of the expression?';
+const rule = 'Find the greatest common divisor of given numbers.';
 const min = 1;
 const max = 30;
 
