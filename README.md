@@ -2,7 +2,14 @@
 
 **Welcome to the Brain Games!**
 
-This is actually a terminal game that consists of different maths tasks. At the moment we have include games listed below:
+This is actually a terminal game that consists of different maths tasks. 
+**Installation**
+Requirments:
+Node.Js installed
+
+To install **Brain Games** type ```npm i -g braingamespack``` into terminal!
+
+At the moment we have include games listed below:
 
 - **Even game**
   You have to answer if shown number is even or not.
