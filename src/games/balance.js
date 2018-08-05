@@ -7,7 +7,7 @@ const maxRandNum = 1000;
 
 const genGameData = () => {
   const question = getRandomNumber(minRandNum, maxRandNum);
-  const questionToArr = question.toString().split('');
+  const questionToArr = question.toString().split('').sort();
   const balanceNumber = (questionArr) => {
     const max = Math.max(...questionArr);
     const min = Math.min(...questionArr);
@@ -15,7 +15,7 @@ const genGameData = () => {
       return questionArr;
     }
     const modifiedQustion = questionArr.slice(1, questionArr.length - 1);
-    return balanceNumber([max - 1, min + 1, ...modifiedQustion]);
+    return balanceNumber([max - 1, min + 1, ...modifiedQustion].sort());
   };
   const correctAnswer = balanceNumber(questionToArr).sort().join('');
   return [question, correctAnswer];
