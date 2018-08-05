@@ -3,9 +3,8 @@
 **Welcome to the Brain Games!**
 
 This is actually a terminal game that consists of different maths tasks. 
+
 **Installation**
-Requirments:
-Node.Js installed
 
 To install **Brain Games** type ```npm i -g braingamespack``` into terminal!
 
