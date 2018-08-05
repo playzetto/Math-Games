@@ -26,19 +26,3 @@ const genGameData = () => {
 const startGame = () => playGame(genGameData, rule);
 
 export default startGame;
-
-/*
-const isPrime = (num) => {
-  const divider = 2;
-  const iter = (numSymbol, div) => {
-    if (numSymbol === 1 || (div * div <= numSymbol && numSymbol % div === 0)) {
-      return false;
-    }
-    if (div > numSymbol / 2) {
-      return true;
-    }
-    return iter(numSymbol, div + 1);
-  };
-  return iter(num, divider);
-};
-*/
