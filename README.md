@@ -5,24 +5,29 @@
 This is actually a terminal game that consists of different maths tasks. At the moment we have include games listed below:
 
 - **Even game**
+
   You have to answer if shown number is even or not.
 
 ---
 
 - **Calculation game**
+
   You simply have to do some maths excercises on it. Test your abilities!
 
 ---
 
 - **Find GCD game**
+
   All you have to do is to find greatest common divisor of two numbers.
 
 ---
 
 - **Balance game**
+
   Balance the given number
 
 ---
 
 - **Progression game**
+
   Game is gonna show you typical progression line with hided element in it. Guess what value should it be.
