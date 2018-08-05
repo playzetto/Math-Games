@@ -2,6 +2,9 @@ import playGame from '..';
 import getRandomNumber from '../utils';
 
 const rule = 'Is this number prime? ';
+const min = 1;
+const max = 30;
+
 const isPrime = (num) => {
   const iter = (numToCheck, div) => {
     if (numToCheck === 1 || numToCheck === 2 || numToCheck % div === 0) {
@@ -14,8 +17,6 @@ const isPrime = (num) => {
   };
   return iter(num, 2);
 };
-const min = 1;
-const max = 30;
 
 const genGameData = () => {
   const question = getRandomNumber(min, max);
