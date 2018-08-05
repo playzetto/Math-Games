@@ -6,6 +6,7 @@ const min = 1;
 const max = 30;
 
 const isPrime = (num) => {
+  const starterDiv = 2;
   const iter = (numToCheck, div) => {
     if (numToCheck === 1 || numToCheck === 2 || numToCheck % div === 0) {
       return false;
@@ -15,7 +16,7 @@ const isPrime = (num) => {
     }
     return iter(numToCheck, div + 1);
   };
-  return iter(num, 2);
+  return iter(num, starterDiv);
 };
 
 const genGameData = () => {
