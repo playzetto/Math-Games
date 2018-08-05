@@ -3,7 +3,7 @@ import getRandomNumber from '../utils';
 
 const rule = 'Balance the given number.';
 const minRandNum = 100;
-const maxRandNum = 10000;
+const maxRandNum = 1000;
 
 const genGameData = () => {
   const question = getRandomNumber(minRandNum, maxRandNum);
@@ -12,12 +12,12 @@ const genGameData = () => {
     const max = Math.max(...questionArr);
     const min = Math.min(...questionArr);
     if ((max - min) <= 1) {
-      return questionArr.sort().join('');
+      return questionArr;
     }
     const modifiedQustion = questionArr.slice(1, questionArr.length - 1);
     return balanceNumber([max - 1, min + 1, ...modifiedQustion]);
   };
-  const correctAnswer = balanceNumber(questionToArr);
+  const correctAnswer = balanceNumber(questionToArr).sort().join('');
   return [question, correctAnswer];
 };
 
