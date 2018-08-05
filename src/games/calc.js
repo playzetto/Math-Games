@@ -2,8 +2,8 @@ import playGame from '..';
 import getRandomNumber from '../utils';
 
 const rule = 'What is the result of the expression?';
-const min = 1;
-const max = 30;
+const min = 2;
+const max = 20;
 
 const genGameData = () => {
   const num1 = getRandomNumber(min, max);
