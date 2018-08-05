@@ -38,7 +38,7 @@ At the moment we have include games listed below:
 
 - **Balance game**
 
-  Balance the given number
+  Balance the given number.
   
   <img src="https://github.com/yoscro/project-lvl1-s316/blob/master/gifs/balance.gif" width="500" height="300" />
 
