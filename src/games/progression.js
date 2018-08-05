@@ -3,13 +3,11 @@ import getRandomNumber from '../utils';
 
 const rule = 'What number is missing in this progression?';
 const progressionLen = 10;
-const startNum = getRandomNumber(1, 20);
-const stepVal = getRandomNumber(1, 5);
 
-const generateProgression = (progressionLength, firstNum, stepValue) => {
+const generateProgression = (startNum, stepVal) => {
   const progression = [];
-  for (let i = 0; i < progressionLength; i += 1) {
-    progression.push(firstNum + stepValue * i);
+  for (let i = 0; i < progressionLen; i += 1) {
+    progression.push(startNum + stepVal * i);
   }
   return progression;
 };
@@ -23,7 +21,11 @@ const generateQuestion = (progressionArr) => {
   return [question, correctAnswer];
 };
 
-const genGameData = () => generateQuestion(generateProgression(progressionLen, startNum, stepVal));
+const genGameData = () => {
+  const startNum = getRandomNumber(1, 20);
+  const stepVal = getRandomNumber(1, 5);
+  return generateQuestion(generateProgression(startNum, stepVal));
+};
 
 const startGame = () => playGame(genGameData, rule);
 
