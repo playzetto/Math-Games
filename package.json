@@ -1,7 +1,7 @@
 {
-  "name": "firstpublishforhexlet",
-  "version": "1.0.18",
-  "description": "First project of Hexlet & First npm publish",
+  "name": "braingamespack",
+  "version": "1.0.0",
+  "description": "Brain games now available right from the terminal! Project was made during Hexlet educational courses.",
   "keywords": [
     "Hexlet",
     "Brain-games"
