@@ -14,7 +14,7 @@ At the moment we have include games listed below:
 
   You have to answer if shown number is even or not.
 
-  <img src="https://github.com/yoscro/project-lvl1-s316/blob/master/gifs/even.gif" width="500" height="500" />
+  <img src="https://github.com/yoscro/project-lvl1-s316/blob/master/gifs/even.gif" width="500" height="300" />
 
 ---
 
@@ -22,7 +22,8 @@ At the moment we have include games listed below:
 
   You simply have to do some maths excercises on it. Test your abilities!
   
-  ![calcGif](https://github.com/yoscro/project-lvl1-s316/blob/master/gifs/calc.gif)
+  <img src="https://github.com/yoscro/project-lvl1-s316/blob/master/gifs/calc.gif" width="500" height="300" />
+
 
 ---
 
@@ -30,7 +31,8 @@ At the moment we have include games listed below:
 
   All you have to do is to find greatest common divisor of two numbers.
   
-  ![gcdGif](https://github.com/yoscro/project-lvl1-s316/blob/master/gifs/gcd.gif)
+  <img src="https://github.com/yoscro/project-lvl1-s316/blob/master/gifs/gcd.gif" width="500" height="300" />
+
   
 ---
 
@@ -38,7 +40,8 @@ At the moment we have include games listed below:
 
   Balance the given number
   
-  ![balanceGif](https://github.com/yoscro/project-lvl1-s316/blob/master/gifs/balance.gif)
+  <img src="https://github.com/yoscro/project-lvl1-s316/blob/master/gifs/balance.gif" width="500" height="300" />
+
   
 ---
 
@@ -47,5 +50,6 @@ At the moment we have include games listed below:
   Game is gonna show you typical progression line with hided element in it. Guess what value should it be.
   
   
-  ![progressionGif](https://github.com/yoscro/project-lvl1-s316/blob/master/gifs/progression.gif)
+  <img src="https://github.com/yoscro/project-lvl1-s316/blob/master/gifs/progression.gif" width="500" height="300" />
+
   
