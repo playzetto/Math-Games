@@ -16,7 +16,7 @@ const generateProgression = (progressionLength, firstNum, stepValue) => {
 const generateQuestion = (progressionArr) => {
   const randomIndex = getRandomNumber(0, progressionArr.length - 1);
   const correctAnswer = progressionArr[randomIndex].toString();
-  const copyArr = progressionArr; // Не копирует массив, а ссылается на один и тот же блок памяти
+  const copyArr = progressionArr.slice();
   copyArr[randomIndex] = '..';
   const question = copyArr.join(' ');
   return [question, correctAnswer];
