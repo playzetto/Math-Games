@@ -52,4 +52,12 @@ At the moment we have include games listed below:
   
   <img src="https://github.com/yoscro/project-lvl1-s316/blob/master/gifs/progression.gif" width="500" height="300" />
 
+- **Prime game**
+
+  Terminal show you the number and you answer if it's prime or not.
+  
+  
+  <img src="https://github.com/yoscro/project-lvl1-s316/blob/master/gifs/prime.gif" width="500" height="300" />
+
+  
   

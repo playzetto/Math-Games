@@ -3,6 +3,8 @@ import getRandomNumber from '../utils';
 
 const rule = 'What number is missing in this progression?';
 const progressionLen = 10;
+const startNum = getRandomNumber(1, 20);
+const stepVal = getRandomNumber(1, 5);
 
 const generateProgression = (progressionLength, firstNum, stepValue) => {
   const progression = [];
@@ -21,11 +23,7 @@ const generateQuestion = (progressionArr) => {
   return [question, correctAnswer];
 };
 
-const genGameData = () => {
-  const startNum = getRandomNumber(1, 20);
-  const stepVal = getRandomNumber(1, 5);
-  return generateQuestion(generateProgression(progressionLen, startNum, stepVal));
-};
+const genGameData = () => generateQuestion(generateProgression(progressionLen, startNum, stepVal));
 
 const startGame = () => playGame(genGameData, rule);
 

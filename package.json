@@ -1,6 +1,6 @@
 {
   "name": "braingamespack",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Brain games now available right from the terminal! Project was made during Hexlet educational courses.",
   "keywords": [
     "Hexlet",
@@ -11,7 +11,8 @@
     "brain-calc": "dist/bin/brain-calc.js",
     "brain-gcd": "dist/bin/brain-gcd.js",
     "brain-balance": "dist/bin/brain-balance.js",
-    "brain-progression": "dist/bin/brain-progression.js"
+    "brain-progression": "dist/bin/brain-progression.js",
+    "brain-prime": "dist/bin/brain-prime.js"
   },
   "files": [
     "dist"
