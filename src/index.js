@@ -8,16 +8,18 @@ const playGame = (game, rule) => {
   const userName = readlineSync.question('May I ask your name ? ');
   const iter = (acc) => {
     if (acc === numberOfQuestions) {
-      return console.log(`Congratulations, ${userName}!`);
+      console.log(`Congratulations, ${userName}!`);
+      return;
     }
     const [riddleNum, correctAnswer] = game();
     console.log(`Question: ${riddleNum}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === correctAnswer) {
       console.log('Correct!\n');
-      return iter(acc + 1);
+      iter(acc + 1);
+    } else if (userAnswer !== correctAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${userName}!`);
     }
-    return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${userName}!`);
   };
   iter(0);
 };

@@ -25,7 +25,9 @@ const genGameData = () => {
       operand = '-';
       break;
     default:
-      console.log('Something went wrong.');
+      correctAnswer = String(num1 * num2);
+      operand = '*';
+      break;
   }
 
   const questionNum = `${num1} ${operand} ${num2}`;
