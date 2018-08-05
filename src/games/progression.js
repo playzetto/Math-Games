@@ -12,19 +12,15 @@ const generateProgression = (startNum, stepVal) => {
   return progression;
 };
 
-const generateQuestion = (progressionArr) => {
-  const randomIndex = getRandomNumber(0, progressionArr.length - 1);
-  const correctAnswer = progressionArr[randomIndex].toString();
-  const copyArr = progressionArr.slice();
-  copyArr[randomIndex] = '..';
-  const question = copyArr.join(' ');
-  return [question, correctAnswer];
-};
-
 const genGameData = () => {
   const startNum = getRandomNumber(1, 20);
   const stepVal = getRandomNumber(1, 5);
-  return generateQuestion(generateProgression(startNum, stepVal));
+  const progression = generateProgression(startNum, stepVal);
+  const hiddenElementPosition = getRandomNumber(0, progression.length - 1);
+  const correctAnswer = progression[hiddenElementPosition].toString();
+  progression[hiddenElementPosition] = '..';
+  const question = progression.join(' ');
+  return [question, correctAnswer];
 };
 
 const startGame = () => playGame(genGameData, rule);
