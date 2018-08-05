@@ -14,7 +14,7 @@ At the moment we have include games listed below:
 
   You have to answer if shown number is even or not.
 
-  ![EvenGif](https://github.com/yoscro/project-lvl1-s316/blob/master/gifs/even.gif)
+  <img src="https://github.com/yoscro/project-lvl1-s316/blob/master/gifs/even.gif" width="500" height="500" />
 
 ---
 
