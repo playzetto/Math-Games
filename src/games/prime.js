@@ -7,14 +7,17 @@ const max = 30;
 
 const isPrime = (num) => {
   const starterDiv = 2;
-  const iter = (numToCheck, div) => {
-    if (numToCheck === 1 || numToCheck === 2 || numToCheck % div === 0) {
-      return false;
-    }
-    if (div > numToCheck / 2) {
+  if (num === 1 || num < 0) {
+    return false;
+  }
+  const iter = (div) => {
+    if (div > num / 2) {
       return true;
     }
-    return iter(numToCheck, div + 1);
+    if (num % div === 0) {
+      return false;
+    }
+    return iter(num, div + 1);
   };
   return iter(num, starterDiv);
 };
