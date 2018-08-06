@@ -14,12 +14,12 @@ const isPrime = (num) => {
     if (div > num / 2) {
       return true;
     }
-    if (num % div === 0) {
+    if (div * div <= num && num % div === 0) {
       return false;
     }
     return iter(num, div + 1);
   };
-  return iter(num, starterDiv);
+  return iter(starterDiv);
 };
 
 const genGameData = () => {
