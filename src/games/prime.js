@@ -11,11 +11,12 @@ const isPrime = (num) => {
     return false;
   }
   const iter = (div) => {
-    if (div > num / 2) {
-      return true;
-    }
     if (div * div <= num && num % div === 0) {
       return false;
+    }
+
+    if (div > num / 2) {
+      return true;
     }
     return iter(num, div + 1);
   };
