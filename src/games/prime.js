@@ -6,25 +6,20 @@ const min = 1;
 const max = 30;
 
 const isPrime = (num) => {
-  const starterDiv = 2;
-  if (num === 1 || num < 0) {
+  if (num < 2 || (num % 2 === 0 && num !== 2)) {
     return false;
   }
-  const iter = (div) => {
-    if (div * div <= num && num % div === 0) {
+  const maxDiv = Math.round(Math.sqrt(num)) + 1;
+  for (let i = 3; i < maxDiv; i += 2) {
+    if (num % i === 0) {
       return false;
     }
-
-    if (div > num / 2) {
-      return true;
-    }
-    return iter(num, div + 1);
-  };
-  return iter(starterDiv);
+  }
+  return true;
 };
 
 const genGameData = () => {
-  const question = getRandomNumber(min, max);
+  const question = 9;
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
