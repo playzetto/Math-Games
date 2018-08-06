@@ -19,17 +19,7 @@ const genGameData = () => {
     questionToArr.push(maxNum - 1);
     questionToArr.push(minNum + 1);
   }
-  /*
-  const balanceNumber = (questionArr) => {
-    const max = Math.max(...questionArr);
-    const min = Math.min(...questionArr);
-    if ((max - min) <= 1) {
-      return questionArr;
-    }
-    const modifiedQustion = questionArr.slice(1, questionArr.length - 1);
-    return balanceNumber([max - 1, min + 1, ...modifiedQustion].sort());
-  };
-  */
+  
   return [question, correctAnswer];
 };
 
