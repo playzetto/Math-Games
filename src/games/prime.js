@@ -19,7 +19,7 @@ const isPrime = (num) => {
 };
 
 const genGameData = () => {
-  const question = 9;
+  const question = getRandomNumber(min, max);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
