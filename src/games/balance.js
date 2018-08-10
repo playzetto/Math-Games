@@ -19,7 +19,7 @@ const genGameData = () => {
     questionToArr.push(maxNum - 1);
     questionToArr.push(minNum + 1);
   }
-  
+
   return [question, correctAnswer];
 };
 
